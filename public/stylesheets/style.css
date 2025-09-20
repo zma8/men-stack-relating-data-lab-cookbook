@@ -1,0 +1,304 @@
+/* Simple Dark Theme CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: #2d2d2d;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #9b59b6;
+}
+
+/* Headings */
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+/* Forms */
+form {
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #444444;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #9b59b6;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+select[multiple] {
+    height: 150px;
+}
+
+/* Buttons */
+button {
+    background-color: #9b59b6;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #8e44ad;
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Links */
+a {
+    color: #9b59b6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Cards/Lists */
+.card {
+    background-color: #2d2d2d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #444444;
+}
+
+.card:hover {
+    border-color: #9b59b6;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: #2d2d2d;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #444444;
+}
+
+li:hover {
+    border-color: #9b59b6;
+}
+
+/* Recipe Details */
+.recipe-details {
+    background-color: #2d2d2d;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.ingredient-tag {
+    background-color: #9b59b6;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.instructions {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-left: 3px solid #9b59b6;
+    margin: 20px 0;
+    white-space: pre-wrap;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #9b59b6;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #8e44ad;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-secondary {
+    background-color: #555555;
+}
+
+.btn-secondary:hover {
+    background-color: #666666;
+}
+
+/* Messages */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.alert-error {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2d2d2d;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444444;
+}
+
+th {
+    background-color: #1a1a1a;
+    font-weight: bold;
+}
+
+/* Helper text */
+.help-text {
+    font-size: 14px;
+    color: #999999;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    button, .btn {
+        width: 100%;
+    }
+}

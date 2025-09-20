@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Ingredients</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    
+    <div class="container">
+        <h1>Manage Ingredients</h1>
+        
+
+        <form action="/ingredients" method="POST">
+            <h2>Add New Ingredient</h2>
+            <label for="name">Ingredient Name:</label>
+            <input type="text" name="name" id="name" required placeholder="e.g., flour, eggs, milk" />
+            <button type="submit">Add Ingredient</button>
+        </form>
+        
+        <div class="card" style="margin-top: 30px;">
+            <h2>All Ingredients (<%= ingredients.length %>)</h2>
+            
+            <% if (ingredients && ingredients.length > 0) { %>
+                <div class="ingredients-list">
+                    <% ingredients.forEach(ingredient => { %>
+                        <span class="ingredient-tag"><%= ingredient.name %></span>
+                    <% }) %>
+                </div>
+            <% } else { %>
+                <p style="color: #999999;">No ingredients yet. Add some above!</p>
+            <% } %>
+        </div>
+        
+        <div class="actions">
+            <a href="/recipes" class="btn btn-secondary">Back to Recipes</a>
+        </div>
+    </div>
+</body>
+</html>
