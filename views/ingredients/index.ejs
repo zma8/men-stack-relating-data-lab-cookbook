@@ -20,7 +20,7 @@
             <button type="submit">Add Ingredient</button>
         </form>
         
-        <div class="card" style="margin-top: 30px;">
+        <div class="card" >
             <h2>All Ingredients (<%= ingredients.length %>)</h2>
             
             <% if (ingredients && ingredients.length > 0) { %>
@@ -30,7 +30,7 @@
                     <% }) %>
                 </div>
             <% } else { %>
-                <p style="color: #999999;">No ingredients yet. Add some above!</p>
+                <p >No ingredients yet. Add some above!</p>
             <% } %>
         </div>
         

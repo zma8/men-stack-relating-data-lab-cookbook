@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Home Page - Cookbook</title>
 </head>
 <body>
-  <%- include('./partials/_navbar.ejs') %>
-  <% if (user) { %>
-    <h1>Welcome to the app, <%= user.username %>!</h1>
-    <p>
-      <a href="/auth/sign-out">Sign out</a>
-    </p>
-  <% } else { %>
-    <h1>Welcome to the app, guest.</h1>
-    <p>
-      <a href="/auth/sign-up">Sign up</a> or
-      <a href="/auth/sign-in">Sign in</a>.
-    </p>
-  <% } %>
-  <p><a href="/vip-lounge">Get into the VIP Users Only lounge!</a></p>
+    <%- include('./partials/_navbar.ejs') %>
+    
+    <div class="container">
+        <% if (user) { %>
+            <h1>Welcome Back, <%= user.username %>! 👨‍🍳</h1>
+            
+            <div class="card" >
+                <h2>What would you like to do today?</h2>
+                
+                <div class="actions" style="margin-top: 30px;">
+                    <a href="/recipes" class="btn">View My Recipes</a>
+                    <a href="/recipes/new" class="btn">Create New Recipe</a>
+                    <a href="/ingredients" class="btn btn-secondary">Manage Ingredients</a>
+                </div>
+            </div>
+            
+            <div class="card" >
+                <p >Need a break?</p>
+                <a href="/auth/sign-out" >Sign Out</a>
+            </div>
+        <% } else { %>
+            <h1>Welcome to Cookbook! 📚</h1>
+            
+            <div class="card" >
+                <h2>Your Personal Recipe Collection</h2>
+                <p >
+                    Create, organize, and share your favorite recipes all in one place.
+                    Join our community of home cooks and food enthusiasts!
+                </p>
+                
+                <div class="actions" >
+                    <a href="/auth/sign-up" class="btn">Sign Up</a>
+                    <a href="/auth/sign-in" class="btn btn-secondary">Sign In</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Why Join Cookbook?</h3>
+                <ul >
+                    <li> Save all your recipes in one place</li>
+                    <li> Organize ingredients and instructions</li>
+                    <li> Edit and update recipes anytime</li>
+                    <li> Keep your recipes private and secure</li>
+                </ul>
+            </div>
+        <% } %>
+        
+       
+    </div>
 </body>
 </html>

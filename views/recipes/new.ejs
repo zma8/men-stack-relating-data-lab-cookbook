@@ -32,12 +32,12 @@
             </select>
             
             <% if (!ingredients || ingredients.length === 0) { %>
-                <div class="alert alert-error" style="margin-top: -10px;">
-                    No ingredients found. <a href="/ingredients" target="_blank" style="color: white; text-decoration: underline;">Add ingredients first</a>
+                <div class="alert alert-error" >
+                    No ingredients found. <a href="/ingredients" >Add ingredients first</a>
                 </div>
             <% } else { %>
-                <p class="help-text" style="margin-top: -10px;">
-                    Need more ingredients? <a href="/ingredients" target="_blank">Manage ingredients</a> (opens in new tab)
+                <p class="help-text" >
+                    Need more ingredients? <a href="/ingredients" >Manage ingredients</a> (opens in new tab)
                 </p>
             <% } %>
             
